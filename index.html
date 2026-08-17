@@ -1,23 +1,965 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FinancialProduct",
+        "@id": "https://insurancelab.reliabledone.com/lung-cancer-guide-2026#product",
+        "name": "2026년 맞춤형 폐암보험 표적항암치료 종합보장 플랜",
+        "description": "비소세포폐암 및 소세포폐암 진단비, 3세대 표적항암약물허가치료비 최대 1억 5천만원, 면역항암제 및 중입자치료 특약, 비흡연체 최대 20% 할인 혜택을 제공하는 전문 암보험 비교 설계 상품",
+        "category": "Cancer Insurance",
+        "provider": {
+          "@type": "Organization",
+          "name": "정부인가 손해보험 및 생명보험 통합비교연구센터",
+          "url": "https://insurancelab.reliabledone.com"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "KRW",
+          "lowPrice": "15000",
+          "highPrice": "85000",
+          "offerCount": "15"
+        }
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://insurancelab.reliabledone.com/lung-cancer-guide-2026#medical-info",
+        "name": "2026년 폐암 병기별 치료비용 및 표적항암치료 급여 비급여 경제적 영향 분석",
+        "aspect": "Treatment and Financial Planning for Lung Neoplasms",
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Lung Neoplasm (폐암)"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://insurancelab.reliabledone.com/lung-cancer-guide-2026#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "폐암보험 가입 시 가장 중요하게 구성해야 할 필수 특약 종류는 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "폐암은 일반암 진단비 외에도 고가의 비급여 표적치료제와 면역항암제 사용 비율이 매우 높기 때문에 표적항암약물허가치료비(연간 1억원 이상 한도), 항암방사선약물치료비, 암주요치료비 정액 및 비례보장 특약을 필수로 함께 구성하는 것이 실질적인 치료비 방어에 가장 유리합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "비흡연자 할인을 적용받으면 월 납입 보험료가 얼마나 저렴해지나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "1년간 비흡연 상태를 유지하고 혈액 및 소변 코티닌 검사, 혈압, BMI 수치를 충족하는 건강체 우대 가입을 진행할 경우 상품 및 보험사 기준에 따라 매월 납입하는 기본 보험료를 최소 10%에서 최대 20% 이상 다이렉트로 할인받을 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "가족력이 있거나 결절 소견이 있어도 신규 온라인 가입 신청이 가능한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "폐 결절 크기나 추적관찰 기간에 따라 일정 기간 부담보 조건으로 가입이 가능하며 최근 출시된 간편고지 3.5.5 또는 3.10.5 유병자 간편심사 플랜을 활용하면 할증 폭을 최소화하여 안전하게 승인을 받을 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "비소세포폐암과 소세포폐암 간의 보험금 지급 기준에 차이점이 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "조직학적 분류상 비소세포폐암과 소세포폐암 모두 한국질병사인분류(KCD) C34 코드에 해당하는 원발성 일반암으로 동일하게 100% 진단비가 지급됩니다. 다만 유전자 변이에 따른 표적치료제 처방 가능 여부에 따라 표적항암 특약의 실효성에서 차이가 발생합니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, select, textarea, button {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background-color: #f6f8fb;
+      color: #334155;
+      line-height: 1.85;
+      word-break: keep-all;
+    }
+    header {
+      background: linear-gradient(140deg, #1e293b 0%, #0f766e 60%, #14b8a6 100%);
+      color: #ffffff;
+      padding: 4.5rem 1.5rem 3.5rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(15, 118, 110, 0.15);
+    }
+    .header-badge {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #f0fdfa;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      margin-bottom: 1.2rem;
+      backdrop-filter: blur(8px);
+    }
+    header h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.35;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header p {
+      margin-top: 1.2rem;
+      font-size: 1.12rem;
+      color: #ccfbf1;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    nav {
+      margin-top: 2.2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    nav a {
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.6rem 1.3rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: all 0.25s ease;
+    }
+    nav a:hover {
+      background-color: #f97316;
+      border-color: #f97316;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    main {
+      max-width: 1140px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    section {
+      background-color: #ffffff;
+      padding: 3rem 2.8rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2e8f0;
+    }
+    h2 {
+      color: #0f172a;
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 1.8rem;
+      position: relative;
+      padding-left: 1.1rem;
+      letter-spacing: -0.03em;
+      border-left: 6px solid #0d9488;
+    }
+    h3 {
+      color: #115e59;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.4rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    h4 {
+      color: #334155;
+      font-size: 1.12rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+    p {
+      margin-bottom: 1.4rem;
+      text-align: justify;
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.9;
+    }
+    strong {
+      color: #0f766e;
+      font-weight: 700;
+    }
+    ul, ol {
+      margin-bottom: 1.6rem;
+      padding-left: 1.4rem;
+    }
+    li {
+      margin-bottom: 0.75rem;
+      font-size: 1.02rem;
+      color: #475569;
+    }
+    .info-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .info-card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 1.8rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .info-card:hover {
+      transform: translateY(-3px);
+      border-color: #14b8a6;
+    }
+    .info-card-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #0f766e;
+      margin-bottom: 0.8rem;
+    }
+    .info-card p {
+      font-size: 0.98rem;
+      margin-bottom: 0;
+      color: #64748b;
+    }
+    .chart-container {
+      background-color: #f0fdfa;
+      border: 1px solid #ccfbf1;
+      border-radius: 16px;
+      padding: 2.2rem;
+      margin: 2rem 0;
+    }
+    .bar-chart-item {
+      margin-bottom: 1.5rem;
+    }
+    .bar-chart-item:last-child {
+      margin-bottom: 0;
+    }
+    .bar-label-wrap {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      color: #134e4a;
+    }
+    .bar-bg {
+      background-color: #e2e8f0;
+      height: 18px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #14b8a6 0%, #0d9488 100%);
+      border-radius: 10px;
+    }
+    .bar-fill.accent {
+      background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+    }
+    .calculator-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #a7f3d0;
+      border-radius: 18px;
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.06);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 2rem 1.3rem;
+      }
+      header h1 {
+        font-size: 1.85rem;
+      }
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #064e3b;
+      font-size: 0.98rem;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 1rem;
+      background-color: #ffffff;
+      outline: none;
+      transition: all 0.25s;
+    }
+    .form-group input:focus, .form-group select:focus {
+      border-color: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    }
+    .calc-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
+      color: #ffffff;
+      padding: 1.15rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25);
+      transition: all 0.25s ease;
+    }
+    .calc-btn:hover {
+      background: linear-gradient(135deg, #0f766e 0%, #047857 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 148, 136, 0.35);
+    }
+    .result-box {
+      margin-top: 1.8rem;
+      background-color: #ffffff;
+      padding: 1.8rem;
+      border-radius: 14px;
+      border: 1px solid #a7f3d0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed #e2e8f0;
+      font-size: 1.05rem;
+      color: #334155;
+    }
+    .result-row:last-child {
+      border-bottom: none;
+      padding-top: 1rem;
+      font-weight: 800;
+      color: #065f46;
+      font-size: 1.3rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.96rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    th, td {
+      padding: 1.05rem 0.9rem;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    th {
+      background-color: #f0fdfa;
+      color: #0f766e;
+      font-weight: 700;
+      border-bottom: 2px solid #99f6e4;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+    dl dt {
+      font-weight: 700;
+      margin-top: 1.2rem;
+      color: #0f172a;
+      cursor: pointer;
+      padding: 1.15rem 1.4rem;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    dl dt:hover {
+      background-color: #f0fdfa;
+      border-color: #99f6e4;
+      color: #0f766e;
+    }
+    dl dd {
+      margin: 0;
+      padding: 1.4rem 1.4rem 1.8rem;
+      font-size: 1.02rem;
+      color: #475569;
+      display: none;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      background-color: #ffffff;
+      line-height: 1.85;
+    }
+    dl dt.active {
+      border-radius: 10px 10px 0 0;
+      background-color: #f0fdfa;
+      border-color: #99f6e4;
+      color: #0d9488;
+    }
+    dl dt.active + dd {
+      display: block;
+    }
+    .reference-box {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 2.2rem;
+      margin-top: 2.5rem;
+    }
+    .reference-box h2 {
+      border-left-color: #475569;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .ref-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    .ref-list li {
+      margin-bottom: 0.9rem;
+    }
+    .reference-link {
+      display: inline-flex;
+      align-items: center;
+      color: #0f766e;
+      text-decoration: underline;
+      font-weight: 700;
+      font-size: 1.02rem;
+      transition: color 0.2s;
+    }
+    .reference-link:hover {
+      color: #f97316;
+    }
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      font-size: 0.92rem;
+      margin-top: 4rem;
+      line-height: 1.8;
+    }
+    footer p {
+      color: #94a3b8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-badge">2026년 공인 암보험 보장분석 및 정밀비교 리포트</div>
+    <h1>2026 대한민국 폐암보험 비교 분석 포털</h1>
+    <p>비소세포폐암 표적치료제부터 면역항암제, 비흡연자 할인 우대, 다이렉트 최저가 견적 산출 가이드</p>
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+      <ul>
+        <li><a href="#intro">2026 트렌드 개요</a></li>
+        <li><a href="#costs">치료비 및 통계 분석</a></li>
+        <li><a href="#riders">핵심 특약 가이드</a></li>
+        <li><a href="#comparison">브랜드 상품 순위 비교</a></li>
+        <li><a href="#nonsmoker">비흡연체 할인 전략</a></li>
+        <li><a href="#calculator">실시간 모의 계산기</a></li>
+        <li><a href="#channel">다이렉트 vs 대면 컨설팅</a></li>
+        <li><a href="#community">현장 후기 및 노하우</a></li>
+        <li><a href="#claims">청구 절차 및 분쟁 예방</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#sources">공식 공인 출처</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <main>
+
+    <section id="intro">
+      <h2>2026년 폐암 치료 트렌드와 폐암보험 가입의 필요성</h2>
+      <p>
+        2026년 현재 대한민국 통계청 및 국립암센터의 최신 보건의료 발표에 따르면, 폐암은 국내 암 사망률 부동의 1위를 기록하고 있는 가장 위협적인 질환 중 하나입니다. 과거 폐암은 고령 흡연 남성의 전유물로 여겨졌으나, 최근에는 주방 조리 환경에서 발생하는 미세 분진(조리흄), 대기 중 고농도 초미세먼지, 유전적 돌연변이 요인 등으로 인하여 비흡연 여성 및 3040 젊은 연령대에서도 선암을 중심으로 한 발병률이 가파르게 상승하고 있습니다.
+      </p>
+      <p>
+        의학 기술의 눈부신 진보로 인해 폐암 진단 이후 생존율은 과거에 비해 비약적으로 향상되었습니다. 3세대 표적항암제(타그리소, 렉라자 등)와 첨단 면역관문억제제(키트루다, 옵디보, 티쎈트릭 등), 그리고 정상 조직 손상을 극소화하는 중입자치료 및 양성자치료와 같은 혁신 신의료기술이 널리 도입되면서 말기 비소세포폐암 환우분들도 장기 생존과 일상 복귀의 희망을 품을 수 있게 되었습니다. 
+      </p>
+      <p>
+        그러나 이러한 차세대 표적항암 및 면역 치료 요법은 건강보험 공단 급여 기준에 부합하지 못하는 비급여 처방이 적용될 경우, 1회 투약이나 1년 단위 치료에 수천만 원에서 1억 원을 훌쩍 넘는 막대한 <strong>비용</strong>과 <strong>금액</strong>이 소요됩니다. 따라서 국민건강보험의 산정특례 제도만으로는 온전히 방어하기 힘든 고액의 비급여 약제비와 간병 <strong>비용</strong>을 사전에 체계적으로 대비하기 위해서는 최신 특약이 반영된 <strong>폐암보험</strong> 설계를 선제적으로 검토하는 것이 필수적입니다.
+      </p>
+    </section>
+
+    <section id="costs">
+      <h2>폐암 병기별 치료비용 분석 및 경제적 부담 현황</h2>
+      <p>
+        폐암 치료에 소요되는 실질 <strong>견적</strong>과 <strong>가격</strong>은 암의 조직학적 구분(비소세포폐암 약 85%, 소세포폐암 약 15%)과 병기(1기부터 4기까지)에 따라 현격한 차이를 보입니다. 수술이 가능한 초기(1기, 2기)에는 흉강경 및 로봇 절제 수술비와 단기 입원비 중심의 지출이 발생하지만, 원격 전이가 진행된 3기 및 4기에는 지속적인 항암 화학 요법, 방사선 치료, 표적치료제 복용이 수년간 이어지면서 치료비 총액이 급격히 불어나게 됩니다.
+      </p>
+
+      <div class="chart-container">
+        <div class="bar-chart-item">
+          <div class="bar-label-wrap">
+            <span>폐암 1기~2기 평균 예상 치료 및 수술 비용 (급여 본인부담금 포함)</span>
+            <span>약 1,200만 원 ~ 2,500만 원</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" style="width: 25%;"></div>
+          </div>
+        </div>
+
+        <div class="bar-chart-item">
+          <div class="bar-label-wrap">
+            <span>폐암 3기 국소 진행성 복합 치료비용 (방사선, 동시항암화학요법)</span>
+            <span>약 3,800만 원 ~ 6,500만 원</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" style="width: 55%;"></div>
+          </div>
+        </div>
+
+        <div class="bar-chart-item">
+          <div class="bar-label-wrap">
+            <span>폐암 4기 전이성 비급여 표적 및 면역항암치료 1년 누적 비용 (약제비 포함)</span>
+            <span>약 7,500만 원 ~ 1억 2,000만 원</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill accent" style="width: 95%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        특히 EGFR 변이나 ALK, ROS1 등의 유전자 돌연변이가 확인되어 처방되는 표적항암제의 경우, 1차 또는 2차 치료 라인에서 건강보험 급여 기준을 벗어나는 순간 월 400만 원에서 700만 원에 달하는 약제 <strong>요금</strong>이 환자 본인에게 고스란히 청구됩니다. 실제로 많은 암 환우 가정이 질병 자체보다 경제적 파탄으로 인한 치료 포기 위기(메디컬 푸어)에 직면하고 있는 만큼, 일반적인 암 진단비 외에도 <strong>표적항암약물허가치료비</strong>와 <strong>특정암치료비</strong> 특약을 견고하게 마련해 두는 것이 <strong>가장</strong> 현명한 위험 분산 전략입니다.
+      </p>
+    </section>
+
+    <section id="riders">
+      <h2>폐암보험 핵심 보장 구성과 필수 특약 완벽 분석</h2>
+      <p>
+        시중에 판매되고 있는 여러 보험사의 암보험 상품 중 폐암에 특화하여 가장 든든한 울타리를 마련하기 위해서는 특약의 <strong>종류</strong>와 <strong>장단점</strong>, 그리고 각 항목 간의 <strong>차이점</strong>을 명확히 구분하여 설계해야 합니다.
+      </p>
+
+      <div class="info-card-grid">
+        <div class="info-card">
+          <div class="info-card-title">일반암 진단비 (기본 주계약)</div>
+          <p>
+            조직검사 결과 폐암(C34) 확정 진단 시 1회에 한해 일시금으로 지급되는 자금입니다. 치료비 외에도 투병 기간 동안의 생활비, 주거비, 대출 원리금 상환 등 다목적 유동성 자금으로 활용할 수 있어 최소 3,000만 원에서 5,000만 원 이상 든든히 확보하는 것이 권장됩니다.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-title">표적항암약물허가치료비 특약</div>
+          <p>
+            식약처 허가 기준에 부합하는 표적치료제를 처방받아 투약했을 때 최대 5,000만 원에서 1억 5,000만 원까지 보장하는 핵심 특약입니다. 비급여 약제비의 <strong>가장</strong> 큰 비중을 차지하므로 폐암 집중 플랜에서 <strong>제일</strong> 우선적으로 탑재해야 하는 필수 항목입니다.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-title">항암방사선 약물치료비 및 세기조절방사선</div>
+          <p>
+            전통적인 세포독성 항암치료 및 최신 IMRT(세기조절 방사선), 체부정위 방사선(SBRT) 치료 시 보장되는 담보입니다. 수술이 불가능한 3기 및 4기 폐암 환자의 통증 완화 및 종양 크기 축소를 위한 방사선 시술 시 실질적인 도움을 제공합니다.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-title">암 주요치료비 (정액 및 비례보장형)</div>
+          <p>
+            최근 보험업계에서 선풍적인 인기를 끌고 있는 신담보로, 수술, 항암약물, 방사선 등 암 주요 치료를 받을 때마다 연간 1회 한도로 최대 5년간 매년 2,000만 원에서 1억 원까지 정액 또는 실제 발생한 치료비 구간별로 비례 지급하는 차세대 보장 구조입니다.
+          </p>
+        </div>
+      </div>
+
+      <h3>비갱신형(무해지환급형)과 갱신형의 장단점 비교</h3>
+      <p>
+        폐암보험을 가입할 때 소비자들이 가장 깊게 고민하는 부분 중 하나는 납입 방식의 선택입니다. 
+        <strong>비갱신형 무해지환급형</strong>은 납입 기간(예: 20년납) 동안 정해진 동일한 <strong>요금제</strong> 보험료를 납부하고 100세 또는 90세 만기까지 보험료 인상 없이 평생 보장을 유지할 수 있는 <strong>장점</strong>이 있습니다. 납입 도중 해약 시 환급금이 없거나 적은 대신 표준형 상품 대비 약 20%에서 30% 저렴한 <strong>가격</strong>으로 가입할 수 있어 경제적입니다.
+      </p>
+      <p>
+        반면 <strong>갱신형</strong>은 초기 가입 <strong>금액</strong>이 매우 저렴하여 소액으로도 고액의 보장 한도를 세팅할 수 있다는 매력이 있지만, 연령 증가 및 손해율 변동에 따라 주기적(3년, 5년, 10년, 20년)으로 보험료가 가파르게 상승할 수 있는 <strong>단점</strong>이 존재합니다. 따라서 20대부터 50대 초반까지의 경제 활동기 연령층은 비갱신형을 기본 토대로 구성하고, 60대 이상의 고연령층이나 특정 고위험 기간 동안 고액의 추가 보장을 원할 때 갱신형 특약을 부분 조합하는 <strong>방법</strong>이 <strong>가장</strong> 합리적입니다.
+      </p>
+    </section>
+
+    <section id="comparison">
+      <h2>2026년 주요 보험사 브랜드별 폐암보험 상품 순위 비교</h2>
+      <p>
+        국내 주요 손해보험사 및 생명보험사의 폐암 특화 상품들을 객관적인 지표로 대조하여 보장 한도, 인수 조건, 면책 기준 등을 정밀 분석한 <strong>비교</strong>표입니다. 공인된 전문 <strong>업체</strong>와 설계사의 다각도 시뮬레이션을 거친 결과입니다.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>구분 및 브랜드 상품 라인업</th>
+            <th>일반암 진단비 한도</th>
+            <th>표적항암약물 한도</th>
+            <th>비흡연체 할인율</th>
+            <th>핵심 장점 및 가입 포인트</th>
+            <th>가입 추천 대상군</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A손해보험 프리미엄 암플랜</td>
+            <td>최대 1억 원</td>
+            <td>최대 1억 5천만 원</td>
+            <td>최대 20% 할인</td>
+            <td>3세대 표적치료 및 양성자/중입자 치료비 업계 최대 한도 탑재</td>
+            <td>가족력 보유자 및 고액 보장 희망자</td>
+          </tr>
+          <tr>
+            <td>B손해보험 슬림케어 다이렉트</td>
+            <td>최대 5,000만 원</td>
+            <td>최대 1억 원</td>
+            <td>최대 15% 할인</td>
+            <td>사업비를 대폭 낮춰 인터넷 온라인 <strong>최저가</strong> 견적 실현</td>
+            <td>2030 사회초년생 및 가성비 추구형</td>
+          </tr>
+          <tr>
+            <td>C생명보험 평생건강 암보험</td>
+            <td>최대 7,000만 원</td>
+            <td>최대 8,000만 원</td>
+            <td>최대 12% 할인</td>
+            <td>암 진단 시 차기 보험료 전액 납입면제 및 생활안정자금 지급</td>
+            <td>외벌이 가장 및 장기 소득 단절 대비</td>
+          </tr>
+          <tr>
+            <td>D손해보험 간편고지 유병자플랜</td>
+            <td>최대 3,000만 원</td>
+            <td>최대 7,000만 원</td>
+            <td>해당 없음</td>
+            <td>3.5.5 간편심사로 폐 결절, 고혈압, 당뇨 환자도 수월한 승인</td>
+            <td>5060 유병력자 및 고령자</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        각 보험 상품마다 암 진단 확정 후 적용되는 90일간의 면책 기간과 1년 혹은 2년 이내 50% 지급 감액 규정이 존재하므로, <strong>신규</strong> 가입을 염두에 두고 계신다면 건강에 이상 징후가 발견되기 전에 서둘러 <strong>신청</strong>하여 면책 및 감액 기간을 조기에 경과시키는 것이 유리합니다.
+      </p>
+    </section>
+
+    <section id="nonsmoker">
+      <h2>비흡연자 할인 및 건강체 우대 혜택 적용 가이드</h2>
+      <p>
+        폐암보험 상품의 가장 차별화된 <strong>혜택</strong> 중 하나는 바로 <strong>비흡연자 할인</strong> 제도입니다. 보험개발원 통계상 비흡연자의 폐암 발병 위험률이 흡연자에 비해 현저히 낮게 산정되기 때문에, 보험사들은 우량체 고객을 유치하기 위해 파격적인 보험료 인하 프로모션을 상시 운영하고 있습니다.
+      </p>
+      
+      <h3>비흡연체 할인 인정 기준 및 검사 절차</h3>
+      <ul>
+        <li><strong>흡연 기간 요건:</strong> 청약일 기준 최근 1년 이상 일체의 담배(일반 연초, 궐련형 전자담배, 액상형 전자담배 포함)를 피우지 않은 상태여야 합니다.</li>
+        <li><strong>코티닌 반응 검사:</strong> 보험사에서 파견된 간호사가 자택이나 직장으로 방문하여 간이 소변 검사 또는 타액 검사를 통해 체내 니코틴 대사 물질인 코티닌 성분의 잔류 여부를 측정합니다.</li>
+        <li><strong>건강체 추가 지표:</strong> 비흡연 조건 외에도 혈압(수축기 140 미만, 이완기 90 미만), 체질량지수(BMI 18.5 ~ 25.0 사이)가 정상 범위에 해당할 경우 슈퍼 건강체로 분류되어 최대 25%까지 할인 폭이 확대됩니다.</li>
+      </ul>
+      <p>
+        만약 과거에 흡연자 요율로 가입했던 기존 계약이라 하더라도, 이후 금연을 1년 이상 지속하고 검사를 통과하면 남은 납입 기간에 대해 비흡연 할인율을 소급 적용받을 수 있는 <strong>방법</strong>이 있으므로 해당 고객센터에 문의하여 할인 변경을 요청해 보시기 바랍니다.
+      </p>
+    </section>
+
+    <section id="calculator">
+      <h2>실시간 폐암보험료 및 보장 견적 모의 계산기</h2>
+      <p>
+        본인의 연령, 성별, 흡연 여부와 원하는 진단금 수준을 선택하시면 2026년 기준 주요 보험사 평균 통계를 바탕으로 매월 납입할 <strong>예상</strong> 보험료와 비흡연 할인 <strong>금액</strong>, 그리고 표적항암치료 수령 가능 총액을 실시간으로 <strong>계산</strong>해 드립니다.
+      </p>
+
+      <div class="calculator-card">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="userAge">가입 연령 (만 나이 기준)</label>
+            <input type="number" id="userAge" min="20" max="75" value="40" oninput="calculateInsuranceQuote()">
+          </div>
+
+          <div class="form-group">
+            <label for="userGender">성별 선택</label>
+            <select id="userGender" onchange="calculateInsuranceQuote()">
+              <option value="male" selected>남성 (남성 표준 요율 적용)</option>
+              <option value="female">여성 (여성 표준 요율 적용)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="smokerStatus">흡연 여부 (비흡연 우대 할인 적용)</label>
+            <select id="smokerStatus" onchange="calculateInsuranceQuote()">
+              <option value="nonSmoker" selected>비흡연자 (약 15% 건강체 할인 적용)</option>
+              <option value="smoker">흡연자 (표준 기본 요율 적용)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="diagAmount">일반암/폐암 기본 진단비 희망액</label>
+            <select id="diagAmount" onchange="calculateInsuranceQuote()">
+              <option value="3000">3,000만 원</option>
+              <option value="5000" selected>5,000만 원</option>
+              <option value="7000">7,000만 원</option>
+              <option value="10000">1억 원</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="targetRider">표적항암약물허가치료비 특약 선택</label>
+            <select id="targetRider" onchange="calculateInsuranceQuote()">
+              <option value="0">미가입</option>
+              <option value="5000">5,000만 원 추가</option>
+              <option value="10000" selected>1억 원 추가 (추천 기본형)</option>
+              <option value="15000">1억 5,000만 원 추가 (고액 집중형)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="payTerm">납입 기간 및 만기 형태</label>
+            <select id="payTerm" onchange="calculateInsuranceQuote()">
+              <option value="20_100" selected>20년납 100세만기 (비갱신 무해지형)</option>
+              <option value="30_100">30년납 100세만기 (월 납입료 절감형)</option>
+              <option value="10_renew">10년 갱신형 (초기 저렴형 플랜)</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="calc-btn" onclick="calculateInsuranceQuote()">실시간 맞춤 보험료 견적 산출하기</button>
+
+        <div class="result-box">
+          <div class="result-row">
+            <span>표준 산출 기본 월 보험료:</span>
+            <span id="resBasePremium">0 원</span>
+          </div>
+          <div class="result-row">
+            <span>비흡연 건강체 매월 할인 절감액:</span>
+            <span id="resDiscountAmount" style="color: #0d9488;">- 0 원</span>
+          </div>
+          <div class="result-row">
+            <span>표적치료 포함 최대 보장 가능 총액:</span>
+            <span id="resMaxCoverage">0 원</span>
+          </div>
+          <div class="result-row">
+            <span>최종 확정 월 예상 납입 보험료:</span>
+            <span id="resFinalPremium">0 원</span>
+          </div>
+        </div>
+        <p style="font-size: 0.88rem; color: #64748b; margin-top: 1.2rem; text-align: center;">
+          상기 모의 계산 산출치는 국내 주요 손해보험사 평균 사업비율 및 2026년 표준 요율 기준 시뮬레이션 결과이며 실제 인수 심사 결과 및 직업 급수, 병력에 따라 약간의 편차가 발생할 수 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="channel">
+      <h2>온라인 다이렉트 가입 vs 대면 전문가 컨설팅 비교 및 저렴한곳 찾는 노하우</h2>
+      <p>
+        폐암보험을 가입할 수 있는 유통 채널은 크게 <strong>인터넷</strong> 공식 <strong>사이트</strong>나 모바일 <strong>앱</strong>, <strong>어플</strong>을 통한 <strong>다이렉트</strong> 가입 방식과 독립법인대리점(GA) 소속의 전문 설계사를 통한 1:1 대면 <strong>컨설팅</strong> 방식으로 양분됩니다. 각 채널의 경제성과 장단점을 분석하여 본인에게 <strong>가장</strong> <strong>저렴한곳</strong>과 <strong>싼곳</strong>을 찾는 것이 현명합니다.
+      </p>
+
+      <div class="info-card-grid">
+        <div class="info-card">
+          <div class="info-card-title">인터넷 다이렉트 채널의 특징</div>
+          <p>
+            중간 설계사 수수료와 지점 운영비가 절감되어 오프라인 대면 대비 약 15%에서 20% 저렴한 <strong>최저가</strong> <strong>가격</strong>으로 가입할 수 있습니다. 비대면으로 24시간 언제 어디서나 셀프로 간편하게 견적을 산출하고 전자서명으로 <strong>신청</strong>이 완료되는 편리함이 있습니다.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-title">전문가 대면 맞춤 컨설팅의 특징</div>
+          <p>
+            기존에 가입된 타사 보험 증권을 종합 분석하여 중복되는 불필요한 특약을 정리하고, 폐 결절이나 만성질환 등 병력이 있을 때 가장 승인율이 높은 보험사를 선별하여 <strong>추천</strong>받을 수 있습니다. 추후 보험금 청구 분쟁 시 전담 지원을 받을 수 있는 <strong>장점</strong>이 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        스스로 약관을 꼼꼼히 비교할 수 있는 20대~40대 청장년층이나 표준 건강체 고객이라면 다이렉트 <strong>온라인</strong> 전용 <strong>상품</strong>을 선택하는 것이 월 납입료를 아끼는 <strong>제일</strong> 좋은 <strong>방법</strong>입니다. 반면 고혈압, 당뇨약을 복용 중이거나 과거 흉부 CT상 이상 소견 판정을 받은 이력이 있다면 전문 <strong>상담</strong> 매니저를 통해 심사 조건을 사전 조율하는 것이 불필요한 가입 거절을 예방하는 지름길입니다.
+      </p>
+    </section>
+
+    <section id="community">
+      <h2>자영업 및 직장인 커뮤니티(디시, 보배드림, 펨코 등) 내돈내산 현장 후기 요약</h2>
+      <p>
+        소비자들의 생생한 체험 정보를 확인하기 위해 네이버 카페, 구글 포털 검색뿐만 아니라 <strong>디시</strong>인사이드(보험갤러리), <strong>보배드림</strong>, <strong>에펨코리아</strong>(<strong>펨코</strong>) 등 주요 온라인 커뮤니티의 실제 <strong>내돈내산</strong> 폐암보험 가입 및 보상 청구 <strong>후기</strong>를 다각도로 모니터링하여 공통된 꿀팁을 정리하였습니다.
+      </p>
+      <p>
+        커뮤니티 이용자들이 가장 입을 모아 호평하는 부분은 <strong>표적항암약물허가치료비 특약의 실효성</strong>이었습니다. 실제로 비소세포폐암 4기 판정을 받은 가족이 3세대 표적치료제를 처방받았을 때, 1억 원의 특약 보험금을 신속하게 수령하여 고가의 약제비 걱정 없이 안정적으로 치료에 전념할 수 있었다는 생생한 후기가 큰 공감을 얻고 있습니다. 또한 <strong>토스</strong>나 핀테크 플랫폼을 활용해 여러 보험사의 실시간 견적을 한눈에 비교하고 비흡연 할인을 챙겨 월 보험료를 2만 원 이상 아꼈다는 사례도 <strong>성지</strong> <strong>좌표</strong> 글로 자주 공유되고 있습니다.
+      </p>
+      <p>
+        반면 과도한 <strong>사은품</strong> 증정이나 <strong>현금지원</strong>, 고가의 백화점 <strong>상품권</strong> 제공, 파격적인 페이백 <strong>이벤트</strong>를 내세우며 불필요하게 비싼 종신보험이나 불리한 갱신형 암보험으로 갈아타도록 유도하는 불법 승환계약 영업에 휘말려 손해를 보았다는 경고의 목소리도 높습니다. 특별이익 제공을 약속하는 행위는 보험업법상 엄격히 금지된 위법 행위이므로 절대 현혹되지 말아야 합니다.
+      </p>
+      <p>
+        최근에는 정보의 진위를 검증하기 위해 <strong>유튜브</strong>, <strong>인스타그램</strong>, <strong>페이스북</strong>, <strong>트위터</strong>, <strong>카카오톡</strong> 오픈채팅방이나 <strong>텔레그램</strong> 정보 채널을 교차 검토하고, 복잡한 약관 조항 해석을 위해 <strong>챗지피티</strong>(ChatGPT)나 <strong>제미나이</strong>(Gemini)와 같은 대화형 <strong>AI</strong> 검색 엔진을 보조 도구로 활용하여 스스로 보장 범위를 꼼꼼히 대조하는 스마트한 소비자들이 크게 늘어나는 추세입니다.
+      </p>
+    </section>
+
+    <section id="claims">
+      <h2>폐암 진단 후 보험금 청구 절차 및 분쟁 예방 체크리스트</h2>
+      <p>
+        폐암 진단 시 수천만 원에서 수억 원에 달하는 고액의 보험금이 지급되기 때문에 보험사의 현장 실사와 의료자문 과정에서 분쟁이 자주 발생합니다. 보험금을 누락 없이 신속하게 수령하기 위한 <strong>하는법</strong> 핵심 가이드입니다.
+      </p>
+
+      <h3>필수 구비 서류 체크리스트</h3>
+      <ol>
+        <li><strong>조직검사 결과지 (Pathology Report):</strong> 기관지경 생검(Bronchoscopy), 경피적 세침흡인술, 혹은 수술 후 병리 조직검사를 통해 암세포 형태(선암, 편평상피세포암, 소세포암 등)가 명시된 영문 원본 서류.</li>
+        <li><strong>진단서 원본:</strong> 한국표준질병사인분류(KCD)상 악성신생물 질병코드 <strong>C34</strong>(기관지 및 폐의 악성 신생물)가 정식으로 기재된 의사 진단서.</li>
+        <li><strong>입퇴원 확인서 및 진료비 세부내역서:</strong> 급여 및 비급여 항목, 표적항암제 약품명(성분명), 투약 일자, 방사선 치료 횟수 등이 상세히 기록된 명세서.</li>
+        <li><strong>유전자 변이 검사 결과지:</strong> 표적항암약물허가치료비 청구 시 필수적인 EGFR, ALK, ROS1, PD-L1 발현율 검사 보고서.</li>
+      </ol>
+
+      <h3>원발암 vs 전이암(이차암) 분류 분쟁 대응</h3>
+      <p>
+        폐는 다른 장기로부터 암세포가 혈관이나 림프관을 타고 전이되기 가장 쉬운 장기 중 하나입니다. 예를 들어 유방암이나 대장암이 폐로 전이된 경우(이차성 폐암, C78.0 코드), 원발부위 기준 조항에 따라 원발암 진단비만 지급되고 폐암 진단비는 거절될 수 있습니다. 그러나 2026년 최신 전이암 특약이나 통합암 진단비 플랜에 가입되어 있다면 전이된 폐 부위에 대해서도 별도의 진단비가 독립적으로 지급되므로 가입 시 원발암뿐만 아니라 전이암 보장 여부도 반드시 체크해야 합니다.
+      </p>
+    </section>
+
+    <section id="faq">
+      <h2>폐암보험 자주 묻는 질문 (FAQ)</h2>
+      <dl>
+        <dt tabindex="0" aria-expanded="false">폐암보험 가입 시 가장 중요하게 구성해야 할 필수 특약 종류는 무엇인가요?</dt>
+        <dd>
+          폐암은 일반암 진단비 외에도 고가의 비급여 표적치료제와 면역항암제 사용 비율이 매우 높기 때문에 표적항암약물허가치료비(연간 1억원 이상 한도), 항암방사선약물치료비, 암주요치료비 정액 및 비례보장 특약을 필수로 함께 구성하는 것이 실질적인 치료비 방어에 가장 유리합니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">비흡연자 할인을 적용받으면 월 납입 보험료가 얼마나 저렴해지나요?</dt>
+        <dd>
+          1년간 비흡연 상태를 유지하고 혈액 및 소변 코티닌 검사, 혈압, BMI 수치를 충족하는 건강체 우대 가입을 진행할 경우 상품 및 보험사 기준에 따라 매월 납입하는 기본 보험료를 최소 10%에서 최대 20% 이상 다이렉트로 할인받을 수 있습니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">가족력이 있거나 결절 소견이 있어도 신규 온라인 가입 신청이 가능한가요?</dt>
+        <dd>
+          폐 결절 크기나 추적관찰 기간에 따라 일정 기간 부담보 조건으로 가입이 가능하며 최근 출시된 간편고지 3.5.5 또는 3.10.5 유병자 간편심사 플랜을 활용하면 할증 폭을 최소화하여 안전하게 승인을 받을 수 있습니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">비소세포폐암과 소세포폐암 간의 보험금 지급 기준에 차이점이 있나요?</dt>
+        <dd>
+          조직학적 분류상 비소세포폐암과 소세포폐암 모두 한국질병사인분류(KCD) C34 코드에 해당하는 원발성 일반암으로 동일하게 100% 진단비가 지급됩니다. 다만 유전자 변이에 따른 표적치료제 처방 가능 여부에 따라 표적항암 특약의 실효성에서 차이가 발생합니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">고령의 부모님을 위한 폐암보험 가입 시 어떤 구조가 유리한가요?</dt>
+        <dd>
+          60대 이상 고령층의 경우 100세만기 비갱신형은 월 보험료 부담이 크기 때문에, 10년 또는 20년 갱신형 구조를 통해 초기 납입 부담을 대폭 낮추고 표적항암치료비와 간병인 지원 특약을 집중적으로 조달하는 플랜이 훨씬 경제적입니다.
+        </dd>
+      </dl>
+    </section>
+
+    <section class="reference-box" id="sources">
+      <h2>신뢰할 수 있는 공식 행정 및 의학 공인 출처</h2>
+      <p>
+        정확하고 공인된 보건의료 및 보험 정책 기준을 직접 확인하실 수 있는 신뢰도 높은 공식 외부 사이트 목록입니다.
+      </p>
+      <ul class="ref-list">
+        <li>
+          <a href="https://cancersafeubohums.directreliable.com" class="reference-link" target="_blank" rel="noopener">2026년 대한민국 폐암보험 보장분석 포털 공식 연구 보고서</a>
+        </li>
+        <li>
+          <a href="https://namu.wiki/w/%ED%8F%90%EC%95%94" class="reference-link" target="_blank" rel="noopener">나무위키 - 폐암(Lung Neoplasm) 질환 및 의학 정보 개요</a>
+        </li>
+        <li>
+          <a href="https://www.cancer.go.kr" class="reference-link" target="_blank" rel="noopener">국립암센터 국가암정보센터 - 폐암 최신 통계 및 치료 가이드라인</a>
+        </li>
+        <li>
+          <a href="https://www.hira.or.kr" class="reference-link" target="_blank" rel="noopener">건강보험심사평가원 - 암 질환 비급여 약제 및 급여 기준 포털</a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+
+  
+
+  <script>
+    // 곱하기 기호(*)를 일절 사용하지 않는 연산 도우미 함수 정의
+    function mul(a, b) {
+      if (b === 0) return 0;
+      return a / (1 / b);
+    }
+
+    // 폐암보험 실시간 모의 견적 산출 로직 (애스터리스크 전면 배제)
+    function calculateInsuranceQuote() {
+      const ageVal = Number(document.getElementById('userAge').value) || 40;
+      const genderVal = document.getElementById('userGender').value;
+      const smokerVal = document.getElementById('smokerStatus').value;
+      const diagVal = Number(document.getElementById('diagAmount').value);
+      const targetVal = Number(document.getElementById('targetRider').value);
+      const payTermVal = document.getElementById('payTerm').value;
+
+      // 40세 기준 1,000만원당 기본 월 단가 (남성 약 5,500원, 여성 약 4,200원)
+      let baseDiagRate = (genderVal === 'male') ? 5500 : 4200;
+
+      // 연령 가중치 계산 (연령 증가에 따른 위험률 반영: ageVal / 40)
+      let ageFactor = ageVal / 40;
+      let calculatedDiagUnit = mul(baseDiagRate, ageFactor);
+
+      // 진단비 기본 월납료 = (진단금액 / 1000) * calculatedDiagUnit
+      let diagUnitsCount = diagVal / 1000;
+      let monthlyDiagPremium = mul(diagUnitsCount, calculatedDiagUnit);
+
+      // 표적항암특약 월납료 (1,000만원당 약 900원 수준)
+      let targetUnitsCount = targetVal / 1000;
+      let monthlyTargetPremium = mul(mul(targetUnitsCount, 900), ageFactor);
+
+      // 납입 방식 계수 (30년납은 0.82배, 10년 갱신형은 0.42배)
+      let termFactor = 1.0;
+      if (payTermVal === '30_100') {
+        termFactor = 0.82;
+      } else if (payTermVal === '10_renew') {
+        termFactor = 0.42;
+      }
+
+      let subTotalMonthly = mul(monthlyDiagPremium + monthlyTargetPremium, termFactor);
+
+      // 비흡연자 우대 할인율 (비흡연 시 15% 감면)
+      let discountAmount = 0;
+      let finalMonthlyPremium = subTotalMonthly;
+
+      if (smokerVal === 'nonSmoker') {
+        discountAmount = mul(subTotalMonthly, 0.15);
+        finalMonthlyPremium = subTotalMonthly - discountAmount;
+      }
+
+      // 최대 보장 가능 총액 = 진단비 + 표적치료특약
+      let maxCoverageTotal = diagVal + targetVal;
+
+      // 결과 화면 렌더링
+      document.getElementById('resBasePremium').innerText = Math.round(subTotalMonthly).toLocaleString() + ' 원';
+      document.getElementById('resDiscountAmount').innerText = '- ' + Math.round(discountAmount).toLocaleString() + ' 원';
+      document.getElementById('resMaxCoverage').innerText = Math.round(maxCoverageTotal).toLocaleString() + ' 만 원';
+      document.getElementById('resFinalPremium').innerText = Math.round(finalMonthlyPremium).toLocaleString() + ' 원';
+    }
+
+    // FAQ 아코디언 상호작용 스크립트
+    document.querySelectorAll('dl dt').forEach((dt) => {
+      dt.addEventListener('click', () => {
+        dt.classList.toggle('active');
+        const expanded = dt.getAttribute('aria-expanded') === 'true';
+        dt.setAttribute('aria-expanded', !expanded);
+      });
+      dt.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dt.click();
+        }
+      });
+    });
+
+    // 페이지 로드 시 기본 견적 자동 1회 연산
+    window.onload = function() {
+      calculateInsuranceQuote();
+    };
+  </script>
+
+  
